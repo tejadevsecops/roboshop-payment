@@ -1,5 +1,6 @@
 FROM            redhat/ubi9
 RUN             dnf install python3 gcc python3-devel -y
+RUN             dnf clean all
 RUN             mkdir /app
 RUN             useradd -d /app roboshop
 WORKDIR         /app
