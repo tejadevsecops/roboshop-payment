@@ -10,3 +10,6 @@ COPY            payment.ini payment.py rabbitmq.py requirements.txt /app/
 RUN             pip3 install -r requirements.txt
 COPY            run.sh newrelic.ini /app/
 ENTRYPOINT      ["bash", "/app/run.sh"]
+USER            root
+RUN             dnf remove kernel-headers -y
+USER            roboshop
