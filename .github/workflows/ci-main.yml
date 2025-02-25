@@ -10,6 +10,7 @@ jobs:
     uses: tejadevsecops/github-reusable-actions/.github/workflows/ci-main.yml@main
     with:
       componentName: payment
+      SONAR_CLASS_PATH: " "
     secrets:
       VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
 #
